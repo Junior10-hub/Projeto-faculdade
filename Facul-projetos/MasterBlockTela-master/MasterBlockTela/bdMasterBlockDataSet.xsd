@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="bdMasterBlockDataSet" targetNamespace="http://tempuri.org/bdMasterBlockDataSet.xsd" xmlns:mstns="http://tempuri.org/bdMasterBlockDataSet.xsd" xmlns="http://tempuri.org/bdMasterBlockDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" GeneratorFunctionsComponentClassName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" UserFunctionsComponentName="QueriesTableAdapter" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="bdMasterBlockConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="bdMasterBlockConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.MasterBlockTela.Properties.Settings.GlobalReference.Default.bdMasterBlockConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TB_TRANSACAOTableAdapter" GeneratorDataComponentClassName="TB_TRANSACAOTableAdapter" Name="TB_TRANSACAO" UserDataComponentName="TB_TRANSACAOTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="bdMasterBlockConnectionString (Settings)" DbObjectName="bdMasterBlock.dbo.TB_TRANSACAO" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT DISTINCT PRODUTO, COUNT(DISTINCT QUANTIDADE) AS Expr1
+FROM            TB_TRANSACAO
+GROUP BY PRODUTO</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Expr1" DataSetColumn="Expr1" />
+              <Mapping SourceColumn="PRODUTO" DataSetColumn="PRODUTO" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="bdMasterBlockDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="bdMasterBlockDataSet" msprop:Generator_UserDSName="bdMasterBlockDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="TB_TRANSACAO" msprop:Generator_TableClassName="TB_TRANSACAODataTable" msprop:Generator_TableVarName="tableTB_TRANSACAO" msprop:Generator_RowChangedName="TB_TRANSACAORowChanged" msprop:Generator_TablePropName="TB_TRANSACAO" msprop:Generator_RowDeletingName="TB_TRANSACAORowDeleting" msprop:Generator_RowChangingName="TB_TRANSACAORowChanging" msprop:Generator_RowEvHandlerName="TB_TRANSACAORowChangeEventHandler" msprop:Generator_RowDeletedName="TB_TRANSACAORowDeleted" msprop:Generator_RowClassName="TB_TRANSACAORow" msprop:Generator_UserTableName="TB_TRANSACAO" msprop:Generator_RowEvArgName="TB_TRANSACAORowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Expr1" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnExpr1" msprop:Generator_ColumnPropNameInRow="Expr1" msprop:Generator_ColumnPropNameInTable="Expr1Column" msprop:Generator_UserColumnName="Expr1" type="xs:int" minOccurs="0" />
+              <xs:element name="PRODUTO" msprop:Generator_ColumnVarNameInTable="columnPRODUTO" msprop:Generator_ColumnPropNameInRow="PRODUTO" msprop:Generator_ColumnPropNameInTable="PRODUTOColumn" msprop:Generator_UserColumnName="PRODUTO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

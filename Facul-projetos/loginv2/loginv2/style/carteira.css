@@ -1,0 +1,7 @@
+.carteira img{
+	background-size: cover !important;
+	background-position: center;
+	position: absolute;
+	top:0;
+	left: 0;
+}
